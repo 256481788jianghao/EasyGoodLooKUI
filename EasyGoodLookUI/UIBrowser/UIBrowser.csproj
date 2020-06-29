@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyGoodLookUI\EasyGoodLookUI.csproj">
+      <Project>{3442a7b0-a202-4c50-8b5e-e3ac4adc7229}</Project>
+      <Name>EasyGoodLookUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
