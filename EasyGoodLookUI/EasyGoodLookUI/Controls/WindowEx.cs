@@ -15,14 +15,6 @@ namespace EasyGoodLookUI
             DefaultStyleKeyProperty.OverrideMetadata(typeof(WindowEx), new FrameworkPropertyMetadata(typeof(WindowEx)));
         }
 
-        //#region Background
-        //public Brush Background
-        //{
-        //    get { return (Brush)GetValue(BackgroundProperty); }
-        //    set { SetValue(BackgroundProperty, value); }
-        //}
-        //public static readonly DependencyProperty BackgroundProperty =
-        //    DependencyProperty.Register("Background", typeof(Brush), typeof(WindowEx));
-        //#endregion
+        
     }
 }
