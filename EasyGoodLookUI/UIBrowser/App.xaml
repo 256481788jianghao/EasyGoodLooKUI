@@ -6,7 +6,7 @@
     <Application.Resources>
         <!--ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/Themes/WindowEx.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/DefaultStyles.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </-->
     </Application.Resources>
