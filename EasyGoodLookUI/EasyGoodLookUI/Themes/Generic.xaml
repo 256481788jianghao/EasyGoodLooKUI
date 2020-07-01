@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:EasyGoodLookUI">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/DefaultStyles.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/WindowExDefaultStyle.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type local:CustomControl1}">
