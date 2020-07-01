@@ -57,14 +57,14 @@ namespace EasyGoodLookUI
         /// <summary>
         /// Title的background的颜色
         /// </summary>
-        public string TitleBackground
+        public SolidColorBrush TitleBackground
         {
-            get { return (string)GetValue(TitleBackgroundProperty); }
+            get { return (SolidColorBrush)GetValue(TitleBackgroundProperty); }
             set { SetValue(TitleBackgroundProperty, value); }
         }
 
         public static readonly DependencyProperty TitleBackgroundProperty =
-            DependencyProperty.Register("TitleBackground", typeof(string), typeof(WindowEx));
+            DependencyProperty.Register("TitleBackground", typeof(SolidColorBrush), typeof(WindowEx));
         #endregion
 
         #region Commands
