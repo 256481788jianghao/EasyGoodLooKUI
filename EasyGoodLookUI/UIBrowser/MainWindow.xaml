@@ -9,8 +9,12 @@
         Title="EeasyGoodLookUI" Height="450" Width="800">
     <Grid Background="Red">
         <TabControl TabStripPlacement="Left">
-            <TabItem Header="T1"></TabItem>
-            <TabItem Header="T2"></TabItem>
+            <TabItem Header="Home">
+                <Button Content="1"></Button>
+            </TabItem>
+            <TabItem Header="Varaibles">
+                <Button Content="2"></Button>
+            </TabItem>
         </TabControl>
     </Grid>
 </pu:WindowEx>
