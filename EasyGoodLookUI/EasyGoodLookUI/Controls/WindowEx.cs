@@ -65,6 +65,18 @@ namespace EasyGoodLookUI
 
         public static readonly DependencyProperty TitleBackgroundProperty =
             DependencyProperty.Register("TitleBackground", typeof(SolidColorBrush), typeof(WindowEx));
+
+        /// <summary>
+        /// Title的Icon
+        /// </summary>
+        public object TitleIcon
+        {
+            get { return GetValue(TitleIconProperty); }
+            set { SetValue(TitleIconProperty, value); }
+        }
+
+        public static readonly DependencyProperty TitleIconProperty =
+            DependencyProperty.Register("TitleIcon", typeof(object), typeof(WindowEx));
         #endregion
 
         #region Commands

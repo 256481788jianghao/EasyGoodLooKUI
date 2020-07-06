@@ -30,10 +30,8 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="30"/>
                             </Grid.RowDefinitions>
-                            <Label Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
-                                <Label.Content>
-                                    <Path Width="32" Height="32" Stretch="Uniform" Fill="White" Stroke="White" Data="{StaticResource EarthIcon}"></Path>
-                                </Label.Content>
+                            <Label Content="{Binding TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                                
                             </Label>
                             <Grid Grid.Column="1" Background="White">
                                 <Grid.ColumnDefinitions>
