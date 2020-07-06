@@ -10,6 +10,13 @@
     <Grid>
         <pu:TabControlEx TabStripPlacement="Left">
             <pu:TabItemEx Header="Home">
+                <pu:TabItemEx.IconContent>
+                    <Path Width="16" Height="16" Fill="White" Stroke="White" Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </pu:TabItemEx.IconContent>
                 <ListView>
                     <ListView.View>
                         <GridView>
