@@ -4,10 +4,11 @@
              xmlns:local="clr-namespace:UIBrowser"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary>
+        <!--ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/Image/SvgImages.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/DefaultStyles.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        </-->
     </Application.Resources>
 </Application>

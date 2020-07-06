@@ -48,17 +48,19 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\TabControlEx.cs" />
+    <Compile Include="Controls\TabItemEx.cs" />
     <Compile Include="Converter\GridLengthConverter.cs" />
     <Compile Include="Utils\GridLengthUtils.cs" />
     <Page Include="DefaultStyles\DefaultStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DefaultStyles\TabControlDefaultStyle.xaml">
+    <Page Include="DefaultStyles\TabControlExDefaultStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DefaultStyles\TabItemDefaultStyle.xaml">
+    <Page Include="DefaultStyles\TabItemExDefaultStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,11 +80,11 @@
     <Compile Include="CustomControl1.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Themes\TabControl.xaml">
+    <Page Include="Themes\TabControlEx.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\TabItem.xaml">
+    <Page Include="Themes\TabItemEx.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

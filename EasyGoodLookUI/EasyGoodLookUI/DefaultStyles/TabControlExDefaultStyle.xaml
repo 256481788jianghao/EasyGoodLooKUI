@@ -2,7 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EasyGoodLookUI">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/Themes/TabControl.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/Themes/TabControlEx.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
-    <Style TargetType="TabControl" BasedOn="{StaticResource TabControlStyleBase}"></Style>
+    <Style TargetType="local:TabControlEx" BasedOn="{StaticResource TabControlExStyleBase}">
+        <Setter Property="Background" Value="White"></Setter>
+    </Style>
 </ResourceDictionary>

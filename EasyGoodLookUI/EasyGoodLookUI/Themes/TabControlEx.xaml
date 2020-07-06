@@ -1,26 +1,31 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EasyGoodLookUI">
-    <Style x:Key="TabControlStyleBase" TargetType="TabControl">
+    <Style x:Key="TabControlExStyleBase" TargetType="local:TabControlEx">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="TabControl">
+                <ControlTemplate TargetType="local:TabControlEx">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
-                                <RowDefinition/>
+                                <RowDefinition />
                             </Grid.RowDefinitions>
                             <TabPanel x:Name="TabPanel_Items" IsItemsHost="True"></TabPanel>
-                            <ContentPresenter x:Name="PART_SelectedContentHost"
-                                  Margin="{TemplateBinding Padding}"
-                                  ContentSource="SelectedContent"/>
+                            <Canvas x:Name="PBorder">
+                                <ContentPresenter x:Name="PART_SelectedContentHost"
+                                      ContentSource="SelectedContent" Width="{Binding ElementName=PBorder,Path=ActualWidth}" Height="{Binding ElementName=PBorder,Path=ActualHeight}"/>
+                            </Canvas>
+                            
+                                
+                                
+                            
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -28,17 +33,17 @@
                             <Setter TargetName="TabPanel_Items" Property="Grid.Row" Value="0"></Setter>
                             <Setter TargetName="TabPanel_Items" Property="Grid.Column" Value="0"></Setter>
                             <Setter TargetName="TabPanel_Items" Property="Grid.ColumnSpan" Value="2"></Setter>
-                            <Setter TargetName="PART_SelectedContentHost" Property="Grid.Row" Value="1"></Setter>
-                            <Setter TargetName="PART_SelectedContentHost" Property="Grid.Column" Value="0"></Setter>
-                            <Setter TargetName="PART_SelectedContentHost" Property="Grid.ColumnSpan" Value="2"></Setter>
+                            <Setter TargetName="PBorder" Property="Grid.Row" Value="1"></Setter>
+                            <Setter TargetName="PBorder" Property="Grid.Column" Value="0"></Setter>
+                            <Setter TargetName="PBorder" Property="Grid.ColumnSpan" Value="2"></Setter>
                         </Trigger>
                         <Trigger Property="TabStripPlacement" Value="Left">
                             <Setter TargetName="TabPanel_Items" Property="Grid.Row" Value="0"></Setter>
                             <Setter TargetName="TabPanel_Items" Property="Grid.Column" Value="0"></Setter>
                             <Setter TargetName="TabPanel_Items" Property="Grid.RowSpan" Value="2"></Setter>
-                            <Setter TargetName="PART_SelectedContentHost" Property="Grid.Row" Value="0"></Setter>
-                            <Setter TargetName="PART_SelectedContentHost" Property="Grid.Column" Value="1"></Setter>
-                            <Setter TargetName="PART_SelectedContentHost" Property="Grid.RowSpan" Value="2"></Setter>
+                            <Setter TargetName="PBorder" Property="Grid.Row" Value="0"></Setter>
+                            <Setter TargetName="PBorder" Property="Grid.Column" Value="1"></Setter>
+                            <Setter TargetName="PBorder" Property="Grid.RowSpan" Value="2"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

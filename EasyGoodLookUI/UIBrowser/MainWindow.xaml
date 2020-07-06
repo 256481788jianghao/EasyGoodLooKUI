@@ -7,14 +7,20 @@
         xmlns:pu="clr-namespace:EasyGoodLookUI;assembly=EasyGoodLookUI"
         mc:Ignorable="d"
         Title="EeasyGoodLookUI" Height="450" Width="800">
-    <Grid Background="Red">
-        <TabControl TabStripPlacement="Left">
-            <TabItem Header="Home">
-                <Button Content="1"></Button>
-            </TabItem>
-            <TabItem Header="Varaibles">
+    <Grid>
+        <pu:TabControlEx TabStripPlacement="Left">
+            <pu:TabItemEx Header="Home">
+                <ListView>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="jh"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </pu:TabItemEx>
+            <pu:TabItemEx Header="Varaibles">
                 <Button Content="2"></Button>
-            </TabItem>
-        </TabControl>
+            </pu:TabItemEx>
+        </pu:TabControlEx>
     </Grid>
 </pu:WindowEx>
