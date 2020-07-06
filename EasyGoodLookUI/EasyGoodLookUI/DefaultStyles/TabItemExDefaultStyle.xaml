@@ -9,5 +9,6 @@
         <Setter Property="Width" Value="100"></Setter>
         <Setter Property="Height" Value="50"></Setter>
         <Setter Property="Background" Value="LightGray"></Setter>
+        <Setter Property="ShowIcon" Value="True"></Setter>
     </Style>
 </ResourceDictionary>

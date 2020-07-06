@@ -13,7 +13,10 @@
                 <ListView>
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="jh"></GridViewColumn>
+                            <GridView.Columns>
+                                <GridViewColumn Header="jh"></GridViewColumn>
+                            </GridView.Columns>
+                            
                         </GridView>
                     </ListView.View>
                 </ListView>

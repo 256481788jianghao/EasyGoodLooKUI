@@ -4,6 +4,14 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/Image/SvgImages.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="Sytel_Icon" TargetType="Label">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type local:TabItemEx}, AncestorLevel=1},Path=ShowIcon}" Value="False">
+                <Setter Property="Visibility" Value="Collapsed"></Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
     
     <Style x:Key="TabItemExStyleBase" TargetType="local:TabItemEx">
         <Setter Property="Template">
@@ -18,10 +26,7 @@
                                     <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,0,0,0">
-                                    <Label.Content>
-                                        <Path Width="16" Height="16" Stretch="Uniform" Fill="White" Data="{StaticResource HomeIcon}"></Path>
-                                    </Label.Content>
+                                <Label Content="{Binding IconContent}" Style="{StaticResource Sytel_Icon}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,0,0,0">
                                 </Label>
                                 <ContentPresenter Grid.Column="1" ContentSource="Header" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
                             </Grid>
