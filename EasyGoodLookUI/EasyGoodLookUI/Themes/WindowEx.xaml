@@ -30,7 +30,7 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="30"/>
                             </Grid.RowDefinitions>
-                            <Label Content="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type local:WindowEx}, AncestorLevel=1},Path=TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                            <Label Content="{TemplateBinding TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                                 
                             </Label>
                             <Grid Grid.Column="1" Background="White">
