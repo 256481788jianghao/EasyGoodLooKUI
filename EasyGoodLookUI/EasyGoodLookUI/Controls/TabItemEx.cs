@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace EasyGoodLookUI
 {
@@ -39,6 +40,18 @@ namespace EasyGoodLookUI
 
         public static readonly DependencyProperty ShowIconProperty =
             DependencyProperty.Register("ShowIcon", typeof(bool), typeof(TabItemEx));
+
+        /// <summary>
+        /// 焦点颜色
+        /// </summary>
+        public SolidColorBrush FocusBackground
+        {
+            get { return (SolidColorBrush)GetValue(FocusBackgroundProperty);}
+            set { SetValue(FocusBackgroundProperty, value); }
+        }
+
+        public static readonly DependencyProperty FocusBackgroundProperty =
+            DependencyProperty.Register("FocusBackground", typeof(SolidColorBrush), typeof(TabItemEx), new PropertyMetadata(new SolidColorBrush(Colors.Black)));
         #endregion
     }
 }

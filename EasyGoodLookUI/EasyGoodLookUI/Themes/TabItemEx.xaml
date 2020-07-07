@@ -20,7 +20,8 @@
                     <Grid>
                         <Border BorderThickness="{TemplateBinding BorderThickness}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
-                                Background="{TemplateBinding Background}">
+                                Background="{TemplateBinding Background}"
+                                x:Name="itemborder">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="auto"/>
@@ -36,7 +37,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background" Value="Black"></Setter>
+                            <Setter Property="Background" TargetName="itemborder" Value="{Binding FocusBackground,RelativeSource={RelativeSource TemplatedParent}}"></Setter>
                             <Setter Property="Foreground" Value="White"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>

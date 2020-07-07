@@ -9,7 +9,7 @@
         Title="EeasyGoodLookUI" Height="450" Width="800">
     <Grid>
         <pu:TabControlEx TabStripPlacement="Left">
-            <pu:TabItemEx Header="Home">
+            <pu:TabItemEx Header="Home" FocusBackground="Red">
                 <pu:TabItemEx.IconContent>
                     <Path Width="16" Height="16" Fill="White" Stroke="White" Stretch="Uniform">
                         <Path.Data>
