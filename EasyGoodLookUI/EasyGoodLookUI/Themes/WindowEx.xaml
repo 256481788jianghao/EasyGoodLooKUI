@@ -30,9 +30,7 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="30"/>
                             </Grid.RowDefinitions>
-                            <Label Content="{TemplateBinding TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
-                                
-                            </Label>
+                            <Label Content="{TemplateBinding TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
                             <Grid Grid.Column="1" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
@@ -69,14 +67,14 @@
                             <AdornerDecorator Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
                                 <ContentPresenter/>
                             </AdornerDecorator>
-                            <!--Grid Grid.Row="3" Background="Gray" Grid.ColumnSpan="2">
+                            <Grid Grid.Row="3" Background="LightGray" Grid.ColumnSpan="2">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="1*"/>
                                     <ColumnDefinition Width="3*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Content="foot1" VerticalContentAlignment="Center"></Label>
-                                <Label Content="foot2" Grid.Column="1" VerticalContentAlignment="Center"></Label>
-                            </-->
+                                <Label VerticalContentAlignment="Center"></Label>
+                                <Label Grid.Column="1" VerticalContentAlignment="Center"></Label>
+                            </Grid>
                         </Grid>
                     </Border>
                 </ControlTemplate>
