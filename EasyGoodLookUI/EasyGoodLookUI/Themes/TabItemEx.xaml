@@ -28,9 +28,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Label Foreground="{TemplateBinding Foreground}" Content="{TemplateBinding IconContent}" Style="{StaticResource Sytel_Icon}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,0,0,0">
-                                   
+
                                 </Label>
                                 <ContentPresenter Grid.Column="1" ContentSource="Header" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                                
                             </Grid>
                             
                         </Border>

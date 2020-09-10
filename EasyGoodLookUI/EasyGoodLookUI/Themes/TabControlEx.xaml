@@ -17,7 +17,7 @@
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition />
                             </Grid.RowDefinitions>
-                            <TabPanel x:Name="TabPanel_Items" IsItemsHost="True"></TabPanel>
+                            <TabPanel x:Name="TabPanel_Items" IsItemsHost="True" Background="WhiteSmoke"></TabPanel>
                             <Canvas x:Name="PBorder">
                                 <ContentPresenter x:Name="PART_SelectedContentHost"
                                       ContentSource="SelectedContent" Width="{Binding ElementName=PBorder,Path=ActualWidth}" Height="{Binding ElementName=PBorder,Path=ActualHeight}"/>

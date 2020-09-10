@@ -34,7 +34,21 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <pu:GroupBoxEx Header="GPB1"></pu:GroupBoxEx>
+                    <pu:GroupBoxEx Header="GPB1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <pu:Light></pu:Light>
+                            <pu:ShowLabel Grid.Column="1"></pu:ShowLabel>
+                            <pu:InputBox Grid.Row="1" Grid.Column="0"></pu:InputBox>
+                        </Grid>
+                    </pu:GroupBoxEx>
                     <pu:GroupBoxEx Header="GPB2" Grid.Row="1"></pu:GroupBoxEx>
                 </Grid>
             </pu:TabItemEx>

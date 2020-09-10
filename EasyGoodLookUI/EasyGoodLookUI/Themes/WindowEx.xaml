@@ -21,8 +21,10 @@
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"></ColumnDefinition>
                                 <ColumnDefinition Width="{TemplateBinding IconAreaWidth, Converter={StaticResource GridLengthConverter}}"/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition Width="5"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="{TemplateBinding MainHeaderHeight, Converter={StaticResource GridLengthConverter}}"/>
@@ -30,8 +32,8 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="{TemplateBinding FootBarHeight, Converter={StaticResource GridLengthConverter}}"/>
                             </Grid.RowDefinitions>
-                            <Label Content="{TemplateBinding TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
-                            <Grid Grid.Column="1" Background="White">
+                            <Label Content="{TemplateBinding TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2"></Label>
+                            <Grid Grid.Column="2" Background="White" Grid.ColumnSpan="2">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
@@ -63,11 +65,13 @@
                                     </Button.Content>
                                 </Button>
                             </Grid>
-                            <Label Grid.Row="1" Grid.Column="1" Background="{TemplateBinding TitleBackground}"></Label>
-                            <AdornerDecorator Grid.Row="2" Grid.ColumnSpan="2">
+                            <Label Grid.Row="1" Grid.Column="2" Background="{TemplateBinding TitleBackground}" Grid.ColumnSpan="3"></Label>
+
+                            <AdornerDecorator x:Name="AdornerDecorator_c" Grid.Row="2" Grid.ColumnSpan="4" Grid.Column="0">
                                 <ContentPresenter/>
                             </AdornerDecorator>
-                            <Grid Grid.Row="3" Background="LightGray" Grid.ColumnSpan="2">
+                            
+                            <Grid Grid.Row="3" Background="LightGray" Grid.ColumnSpan="4">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="1*"/>
                                     <ColumnDefinition Width="3*"/>
@@ -77,6 +81,11 @@
                             </Grid>
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="WindowState" Value="Maximized">
+                            <Setter TargetName="AdornerDecorator_c" Property="Margin" Value="10,0,10,0"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyGoodLookUI">
+    <Style x:Key="InputBoxBase" TargetType="local:InputBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:InputBox">
+                    <Border>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="{TemplateBinding NameStr}" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+                            <Border Grid.Column="1" BorderBrush="{TemplateBinding BorderColor}" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <TextBox Text="{TemplateBinding ValueStr}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

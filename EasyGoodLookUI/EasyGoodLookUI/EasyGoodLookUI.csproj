@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\GroupBoxEx.cs" />
+    <Compile Include="Controls\InputBox.cs" />
+    <Compile Include="Controls\Light.cs" />
+    <Compile Include="Controls\ShowLabel.cs" />
     <Compile Include="Controls\TabControlEx.cs" />
     <Compile Include="Controls\TabItemEx.cs" />
     <Compile Include="Converter\GridLengthConverter.cs" />
@@ -58,6 +61,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DefaultStyles\GroupBoxExDefaultStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultStyles\InputBoxDefaultStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultStyles\LightDefaultStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultStyles\ShowLabelDefaultStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,6 +101,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Themes\GroupBoxEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\InputBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Light.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ShowLabel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
