@@ -29,7 +29,14 @@
                 </ListView>
             </pu:TabItemEx>
             <pu:TabItemEx Header="Varaibles">
-                <Button Content="2"></Button>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <pu:GroupBoxEx Header="GPB1"></pu:GroupBoxEx>
+                    <pu:GroupBoxEx Header="GPB2" Grid.Row="1"></pu:GroupBoxEx>
+                </Grid>
             </pu:TabItemEx>
         </pu:TabControlEx>
     </Grid>

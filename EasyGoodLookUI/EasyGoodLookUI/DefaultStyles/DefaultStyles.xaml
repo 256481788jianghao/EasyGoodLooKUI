@@ -5,5 +5,6 @@
         <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/TabItemExDefaultStyle.xaml"></ResourceDictionary>
         <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/TabControlExDefaultStyle.xaml"></ResourceDictionary>
         <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/WindowExDefaultStyle.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/GroupBoxExDefaultStyle.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

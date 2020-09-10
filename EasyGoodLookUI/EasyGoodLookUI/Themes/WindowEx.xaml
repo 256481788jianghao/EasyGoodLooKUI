@@ -28,7 +28,7 @@
                                 <RowDefinition Height="{TemplateBinding MainHeaderHeight, Converter={StaticResource GridLengthConverter}}"/>
                                 <RowDefinition Height="{TemplateBinding SubHeaderHeight, Converter={StaticResource GridLengthConverter}}"/>
                                 <RowDefinition Height="*"/>
-                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="{TemplateBinding FootBarHeight, Converter={StaticResource GridLengthConverter}}"/>
                             </Grid.RowDefinitions>
                             <Label Content="{TemplateBinding TitleIcon}" Foreground="White" Background="{TemplateBinding TitleBackground}" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
                             <Grid Grid.Column="1" Background="White">
@@ -64,7 +64,7 @@
                                 </Button>
                             </Grid>
                             <Label Grid.Row="1" Grid.Column="1" Background="{TemplateBinding TitleBackground}"></Label>
-                            <AdornerDecorator Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                            <AdornerDecorator Grid.Row="2" Grid.ColumnSpan="2">
                                 <ContentPresenter/>
                             </AdornerDecorator>
                             <Grid Grid.Row="3" Background="LightGray" Grid.ColumnSpan="2">

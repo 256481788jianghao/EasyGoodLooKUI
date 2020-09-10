@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyGoodLookUI">
+    <Style x:Key="GroupBoxExBase" TargetType="local:GroupBoxEx">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:GroupBoxEx">
+                    <Border BorderThickness="1"  Margin="1,1,1,1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="{TemplateBinding Header}" Background="{TemplateBinding Background}" Foreground="White" Width="100" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Border Grid.Row="1" BorderBrush="{TemplateBinding Background}" BorderThickness="2">
+                                <ContentPresenter></ContentPresenter>
+                            </Border>
+                            
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

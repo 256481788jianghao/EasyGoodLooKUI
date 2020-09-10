@@ -67,6 +67,18 @@ namespace EasyGoodLookUI
             DependencyProperty.Register("TitleBackground", typeof(SolidColorBrush), typeof(WindowEx));
 
         /// <summary>
+        /// footer的高度
+        /// </summary>
+        public string FootBarHeight
+        {
+            get { return (string)GetValue(FootBarHeightProperty); }
+            set { SetValue(FootBarHeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty FootBarHeightProperty =
+            DependencyProperty.Register("FootBarHeight", typeof(string), typeof(WindowEx));
+
+        /// <summary>
         /// Title的Icon
         /// </summary>
         public object TitleIcon
