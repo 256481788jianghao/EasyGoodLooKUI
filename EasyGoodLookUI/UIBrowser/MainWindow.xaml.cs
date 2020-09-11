@@ -26,6 +26,10 @@ namespace UIBrowser
             InitializeComponent();
         }
 
-        
+        private void C_Test_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox item = (ComboBox)e.OriginalSource;
+            MessageBox.Show(item.SelectedIndex.ToString());
+        }
     }
 }

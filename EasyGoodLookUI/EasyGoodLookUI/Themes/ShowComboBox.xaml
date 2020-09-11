@@ -18,7 +18,7 @@
                             <Border Grid.Column="1" BorderBrush="{TemplateBinding BorderColor}" CornerRadius="5" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                                 <ComboBox x:Name="ComboBox_Inter" SelectedIndex="{TemplateBinding SelectedIndex}" 
                                           ItemsSource="{TemplateBinding ItemArray,Converter={StaticResource SToListConvert}}"
-                                          SelectionChanged="{TemplateBinding SelectionChangeCB}"></ComboBox>
+                                          ></ComboBox>
                             </Border>
                         </Grid>
                     </Border>

@@ -10,7 +10,7 @@ using System.Windows.Media;
 
 namespace EasyGoodLookUI
 {
-    class ShowComboBox:ComboBox
+    public class ShowComboBox:ComboBox
     {
         static ShowComboBox()
         {
@@ -47,42 +47,42 @@ namespace EasyGoodLookUI
 
 
         #region Commands
-        public ICommand SelectionChangeCB
-        {
-            get { return (ICommand)GetValue(SelectionChangeCBProperty); }
-            set { SetValue(SelectionChangeCBProperty, value); }
-        }
+        //public ICommand SelectionChangeCB
+        //{
+        //    get { return (ICommand)GetValue(SelectionChangeCBProperty); }
+        //    set { SetValue(SelectionChangeCBProperty, value); }
+        //}
 
-        public static readonly DependencyProperty SelectionChangeCBProperty =
-            DependencyProperty.Register("SelectionChangeCB", typeof(ICommand), typeof(WindowEx), new PropertyMetadata(new InternalCommand(OnSelectedChangeCommandExecute)));
+        //public static readonly DependencyProperty SelectionChangeCBProperty =
+        //    DependencyProperty.Register("SelectionChangeCB", typeof(ICommand), typeof(WindowEx), new PropertyMetadata(new InternalCommand(OnSelectedChangeCommandExecute)));
 
-        private static void OnSelectedChangeCommandExecute(object obj)
-        {
-            ComboBox item = (ComboBox)obj;
-        }
+        //private static void OnSelectedChangeCommandExecute(object obj)
+        //{
+        //    ComboBox item = (ComboBox)obj;
+        //}
 
-        private class InternalCommand : ICommand
-        {
-            private Action<Object> m_ExeAction;
-            private Func<object, bool> m_CanExe;
-            public event EventHandler CanExecuteChanged;
+        //private class InternalCommand : ICommand
+        //{
+        //    private Action<Object> m_ExeAction;
+        //    private Func<object, bool> m_CanExe;
+        //    public event EventHandler CanExecuteChanged;
 
-            public InternalCommand(Action<object> executeAction, Func<object, bool> canExecuteFunc = null)
-            {
-                m_ExeAction = executeAction;
-                m_CanExe = canExecuteFunc;
-            }
+        //    public InternalCommand(Action<object> executeAction, Func<object, bool> canExecuteFunc = null)
+        //    {
+        //        m_ExeAction = executeAction;
+        //        m_CanExe = canExecuteFunc;
+        //    }
 
-            public bool CanExecute(object parameter)
-            {
-                return m_CanExe?.Invoke(parameter) ?? true;
-            }
+        //    public bool CanExecute(object parameter)
+        //    {
+        //        return m_CanExe?.Invoke(parameter) ?? true;
+        //    }
 
-            public void Execute(object parameter)
-            {
-                m_ExeAction?.Invoke(parameter);
-            }
-        }
+        //    public void Execute(object parameter)
+        //    {
+        //        m_ExeAction?.Invoke(parameter);
+        //    }
+        //}
         #endregion
     }
 }
