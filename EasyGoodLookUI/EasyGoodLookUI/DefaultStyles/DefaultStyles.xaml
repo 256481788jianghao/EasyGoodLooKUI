@@ -9,5 +9,6 @@
         <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/LightDefaultStyle.xaml"></ResourceDictionary>
         <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/ShowLabelDefaultStyle.xaml"></ResourceDictionary>
         <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/InputBoxDefaultStyle.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/DefaultStyles/ShowComboBoxDefaultStyle.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -44,9 +44,11 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <pu:Light></pu:Light>
+                            <pu:Light Content="1"></pu:Light>
                             <pu:ShowLabel Grid.Column="1"></pu:ShowLabel>
                             <pu:InputBox Grid.Row="1" Grid.Column="0"></pu:InputBox>
+                            <pu:ShowComboBox x:Name="scom" Grid.Row="1" Grid.Column="1" ItemArray="1,2,3" SelectionChanged="ShowComboBox_SelectionChanged">
+                            </pu:ShowComboBox>
                         </Grid>
                     </pu:GroupBoxEx>
                     <pu:GroupBoxEx Header="GPB2" Grid.Row="1"></pu:GroupBoxEx>

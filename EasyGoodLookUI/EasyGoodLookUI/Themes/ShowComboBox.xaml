@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyGoodLookUI">
+
+    <local:StringToListConverter x:Key="SToListConvert"></local:StringToListConverter>
+    
+    <Style x:Key="ShowComboBoxBase" TargetType="local:ShowComboBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ShowComboBox">
+                    <Border>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="{TemplateBinding NameStr}" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+                            <Border Grid.Column="1" BorderBrush="{TemplateBinding BorderColor}" CornerRadius="5" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <ComboBox x:Name="ComboBox_Inter" SelectedIndex="{TemplateBinding SelectedIndex}" 
+                                          ItemsSource="{TemplateBinding ItemArray,Converter={StaticResource SToListConvert}}"
+                                          SelectionChanged="{TemplateBinding SelectionChangeCB}"></ComboBox>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

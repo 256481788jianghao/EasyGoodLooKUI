@@ -51,10 +51,12 @@
     <Compile Include="Controls\GroupBoxEx.cs" />
     <Compile Include="Controls\InputBox.cs" />
     <Compile Include="Controls\Light.cs" />
+    <Compile Include="Controls\ShowComboBox.cs" />
     <Compile Include="Controls\ShowLabel.cs" />
     <Compile Include="Controls\TabControlEx.cs" />
     <Compile Include="Controls\TabItemEx.cs" />
     <Compile Include="Converter\GridLengthConverter.cs" />
+    <Compile Include="Converter\StringToListConverter.cs" />
     <Compile Include="Utils\GridLengthUtils.cs" />
     <Page Include="DefaultStyles\DefaultStyles.xaml">
       <SubType>Designer</SubType>
@@ -69,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DefaultStyles\LightDefaultStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultStyles\ShowComboBoxDefaultStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\Light.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ShowComboBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
