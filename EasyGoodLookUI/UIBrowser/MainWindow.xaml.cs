@@ -26,9 +26,6 @@ namespace UIBrowser
             InitializeComponent();
         }
 
-        private void ShowComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            MessageBox.Show(scom.SelectedIndex.ToString());
-        }
+        
     }
 }
