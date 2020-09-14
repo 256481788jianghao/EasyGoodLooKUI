@@ -53,6 +53,7 @@
     <Compile Include="Controls\Light.cs" />
     <Compile Include="Controls\ShowComboBox.cs" />
     <Compile Include="Controls\ShowLabel.cs" />
+    <Compile Include="Controls\SwitchButton.cs" />
     <Compile Include="Controls\TabControlEx.cs" />
     <Compile Include="Controls\TabItemEx.cs" />
     <Compile Include="Converter\GridLengthConverter.cs" />
@@ -79,6 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DefaultStyles\ShowLabelDefaultStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultStyles\SwitchButtonDefaultStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\ShowLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\SwitchButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

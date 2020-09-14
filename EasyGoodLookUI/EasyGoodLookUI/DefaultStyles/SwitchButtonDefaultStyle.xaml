@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyGoodLookUI">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/EasyGoodLookUI;component/Themes/SwitchButton.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    <Style TargetType="local:SwitchButton" BasedOn="{StaticResource SwitchButtonBase}">
+        <Setter Property="NameStr" Value="name"></Setter>
+        <Setter Property="IsOn" Value="False"></Setter>
+    </Style>
+</ResourceDictionary>

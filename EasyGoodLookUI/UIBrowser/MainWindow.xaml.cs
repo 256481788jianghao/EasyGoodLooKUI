@@ -31,5 +31,10 @@ namespace UIBrowser
             ComboBox item = (ComboBox)e.OriginalSource;
             MessageBox.Show(item.SelectedIndex.ToString());
         }
+
+        private void SwitchButton_Test_Click(object sender, RoutedEventArgs e)
+        {
+            SwitchButton_Test.IsOn = !SwitchButton_Test.IsOn;
+        }
     }
 }

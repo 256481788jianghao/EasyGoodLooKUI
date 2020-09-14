@@ -47,7 +47,7 @@
                             <pu:Light Content="1"></pu:Light>
                             <pu:ShowLabel Grid.Column="1"></pu:ShowLabel>
                             <pu:InputBox Grid.Row="1" Grid.Column="0"></pu:InputBox>
-                            <pu:ShowComboBox x:Name="C_Test" Grid.Row="1" Grid.Column="1" SelectedIndex="0" SelectionChanged="C_Test_SelectionChanged"></pu:ShowComboBox>
+                            <pu:SwitchButton x:Name="SwitchButton_Test" Grid.Row="1" Grid.Column="1" IsOn="True" Click="SwitchButton_Test_Click"></pu:SwitchButton>
                         </Grid>
                     </pu:GroupBoxEx>
                     <pu:GroupBoxEx Header="GPB2" Grid.Row="1"></pu:GroupBoxEx>
