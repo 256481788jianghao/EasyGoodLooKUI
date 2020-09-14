@@ -13,7 +13,7 @@
                             </Grid.ColumnDefinitions>
                             <Label Content="{TemplateBinding NameStr}" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
                             <Border Grid.Column="1" BorderBrush="{TemplateBinding BorderColor}" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                                <TextBox Text="{TemplateBinding ValueStr}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+                                <TextBox Text="{Binding Path=ValueStr,RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
                             </Border>
                         </Grid>
                     </Border>
