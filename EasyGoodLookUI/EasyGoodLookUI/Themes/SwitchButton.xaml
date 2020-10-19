@@ -8,9 +8,9 @@
                     <Border>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="40"/>
-                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <Label Content="{TemplateBinding NameStr}" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
                             <TextBlock x:Name="Label_On" Background="LightGray"  Text="ON"  VerticalAlignment="Center" Grid.Column="1"></TextBlock>
