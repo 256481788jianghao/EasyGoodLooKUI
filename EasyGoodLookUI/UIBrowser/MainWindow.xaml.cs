@@ -24,6 +24,7 @@ namespace UIBrowser
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new Data();
         }
 
         private void C_Test_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -35,6 +36,11 @@ namespace UIBrowser
         private void SwitchButton_Test_Click(object sender, RoutedEventArgs e)
         {
             SwitchButton_Test.IsOn = !SwitchButton_Test.IsOn;
+        }
+
+        class Data
+        {
+            public double Test { get; set; } = 123.4567;
         }
     }
 }
