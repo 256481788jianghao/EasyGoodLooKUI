@@ -41,6 +41,7 @@ namespace UIBrowser
         class Data
         {
             public double Test { get; set; } = 123.4567;
+            public string TestStr { get; set; } = "jianghao";
         }
     }
 }
