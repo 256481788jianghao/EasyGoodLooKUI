@@ -45,7 +45,7 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <pu:Light Content="1"></pu:Light>
-                            <pu:ShowLabel Grid.Column="1" ValueStr="{Binding Test}" ContentStringFormat="{}{0:F2}"></pu:ShowLabel>
+                            <pu:ShowLabel Grid.Column="1" ValueStr="{Binding Test}" UtiStr="mm/s" ContentStringFormat="{}{0:F2}"></pu:ShowLabel>
                             <pu:InputBox Grid.Row="1" Grid.Column="0"></pu:InputBox>
                             <pu:SwitchButton x:Name="SwitchButton_Test" Grid.Row="1" Grid.Column="1" IsOn="True" Click="SwitchButton_Test_Click"></pu:SwitchButton>
                         </Grid>

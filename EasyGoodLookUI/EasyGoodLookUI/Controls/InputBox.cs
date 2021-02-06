@@ -25,6 +25,15 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty NameStrProperty =
             DependencyProperty.Register("NameStr", typeof(object), typeof(InputBox));
 
+        public object UtiStr
+        {
+            get { return (object)GetValue(UtiStrProperty); }
+            set { SetValue(UtiStrProperty, value); }
+        }
+
+        public static readonly DependencyProperty UtiStrProperty =
+            DependencyProperty.Register("UtiStr", typeof(object), typeof(InputBox));
+
         public object ValueStr
         {
             get { return (object)GetValue(ValueStrProperty); }

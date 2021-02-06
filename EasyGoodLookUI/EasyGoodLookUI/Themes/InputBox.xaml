@@ -10,11 +10,13 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <Label Content="{TemplateBinding NameStr}" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
                             <Border Grid.Column="1" BorderBrush="{TemplateBinding BorderColor}" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                                 <TextBox Text="{Binding Path=ValueStr,RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
                             </Border>
+                            <Label Content="{TemplateBinding UtiStr}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2"></Label>
                         </Grid>
                     </Border>
                 </ControlTemplate>
