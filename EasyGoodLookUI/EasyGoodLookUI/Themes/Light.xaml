@@ -12,15 +12,18 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <Label Content="{TemplateBinding Content}" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-                            <Ellipse x:Name="Lg" Fill="Lime" Grid.Column="1" Height="30" Width="30" HorizontalAlignment="Left" VerticalAlignment="Center"></Ellipse>
+                            <Border x:Name="Lg" Background="Lime" Grid.Column="1" CornerRadius="{TemplateBinding CRadius}" HorizontalAlignment="Left" VerticalAlignment="Center" Height="{TemplateBinding LightHeight}" Width="{TemplateBinding LightWidth}">
+                                <Label     HorizontalAlignment="Left" VerticalAlignment="Center" ></Label>
+                            </Border>
+                            
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsRed" Value="True">
-                            <Setter TargetName="Lg" Property="Fill" Value="Red"></Setter>
+                            <Setter TargetName="Lg" Property="Background" Value="Red"></Setter>
                         </Trigger>
                         <Trigger Property="IsRed" Value="False">
-                            <Setter TargetName="Lg" Property="Fill" Value="Lime"></Setter>
+                            <Setter TargetName="Lg" Property="Background" Value="Lime"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
