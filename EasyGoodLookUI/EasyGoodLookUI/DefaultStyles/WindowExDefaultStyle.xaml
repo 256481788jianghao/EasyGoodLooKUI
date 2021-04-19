@@ -9,6 +9,7 @@
         <Setter Property="SubHeaderHeight" Value="20"></Setter>
         <Setter Property="IconAreaWidth" Value="50"></Setter>
         <Setter Property="TitleBackground" Value="Black"></Setter>
+        <Setter Property="TitleForeground" Value="White"></Setter>
         <Setter Property="FootBarHeight" Value="20"></Setter>
     </Style>
 </ResourceDictionary>

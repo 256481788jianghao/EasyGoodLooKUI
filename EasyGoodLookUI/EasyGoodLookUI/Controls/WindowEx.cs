@@ -66,6 +66,15 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty TitleBackgroundProperty =
             DependencyProperty.Register("TitleBackground", typeof(SolidColorBrush), typeof(WindowEx));
 
+        public SolidColorBrush TitleForeground
+        {
+            get { return (SolidColorBrush)GetValue(TitleForegroundProperty); }
+            set { SetValue(TitleForegroundProperty, value); }
+        }
+
+        public static readonly DependencyProperty TitleForegroundProperty =
+            DependencyProperty.Register("TitleForeground", typeof(SolidColorBrush), typeof(WindowEx));
+
         /// <summary>
         /// footer的高度
         /// </summary>
