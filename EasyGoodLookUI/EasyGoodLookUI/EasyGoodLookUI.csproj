@@ -48,6 +48,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\GridOptions.cs" />
     <Compile Include="Controls\GroupBoxEx.cs" />
     <Compile Include="Controls\InputBox.cs" />
     <Compile Include="Controls\Light.cs" />

@@ -17,16 +17,17 @@
                         </Path.Data>
                     </Path>
                 </pu:TabItemEx.IconContent>
-                <ListView>
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="jh"></GridViewColumn>
-                            </GridView.Columns>
-                            
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+                <Grid pu:GridOptions.ShowBorder="True" pu:GridOptions.LineBrush="Red">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
             </pu:TabItemEx>
             <pu:TabItemEx Header="Varaibles">
                 <Grid>
