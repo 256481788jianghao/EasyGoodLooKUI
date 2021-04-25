@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EasyGoodLookUI">
+    <local:GridLengthConverter x:Key="GridLengthConverter"></local:GridLengthConverter>
     <Style x:Key="ShowLabelBase" TargetType="local:ShowLabel">
         <Setter Property="Template">
             <Setter.Value>
@@ -8,9 +9,9 @@
                     <Border>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="{TemplateBinding NameWidth,Converter={StaticResource GridLengthConverter}}"/>
+                                <ColumnDefinition Width="{TemplateBinding ValueWidth,Converter={StaticResource GridLengthConverter}}"/>
+                                <ColumnDefinition Width="{TemplateBinding UtiWidth,Converter={StaticResource GridLengthConverter}}"/>
                             </Grid.ColumnDefinitions>
                             <Label Content="{TemplateBinding NameStr}" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
                             <Border Grid.Column="1" BorderBrush="{TemplateBinding BorderColor}" CornerRadius="5" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">

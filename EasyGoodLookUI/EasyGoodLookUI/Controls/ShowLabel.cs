@@ -25,6 +25,33 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty NameStrProperty =
             DependencyProperty.Register("NameStr", typeof(object), typeof(ShowLabel));
 
+        public string NameWidth
+        {
+            get { return (string)GetValue(NameWidthProperty); }
+            set { SetValue(NameWidthProperty, value); }
+        }
+
+        public static readonly DependencyProperty NameWidthProperty =
+            DependencyProperty.Register("NameWidth", typeof(string), typeof(ShowLabel));
+
+        public string ValueWidth
+        {
+            get { return (string)GetValue(ValueWidthProperty); }
+            set { SetValue(ValueWidthProperty, value); }
+        }
+
+        public static readonly DependencyProperty ValueWidthProperty =
+            DependencyProperty.Register("ValueWidth", typeof(string), typeof(ShowLabel));
+
+        public string UtiWidth
+        {
+            get { return (string)GetValue(UtiWidthProperty); }
+            set { SetValue(UtiWidthProperty, value); }
+        }
+
+        public static readonly DependencyProperty UtiWidthProperty =
+            DependencyProperty.Register("UtiWidth", typeof(string), typeof(ShowLabel));
+
         public object UtiStr
         {
             get { return (object)GetValue(UtiStrProperty); }

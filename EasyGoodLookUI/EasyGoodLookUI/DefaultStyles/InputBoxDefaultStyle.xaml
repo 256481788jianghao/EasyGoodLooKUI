@@ -8,5 +8,8 @@
         <Setter Property="NameStr" Value="name"></Setter>
         <Setter Property="ValueStr" Value="value"></Setter>
         <Setter Property="BorderColor" Value="Blue"></Setter>
+        <Setter Property="NameWidth" Value="1*"></Setter>
+        <Setter Property="ValueWidth" Value="2*"></Setter>
+        <Setter Property="UtiWidth" Value="1*"></Setter>
     </Style>
 </ResourceDictionary>
