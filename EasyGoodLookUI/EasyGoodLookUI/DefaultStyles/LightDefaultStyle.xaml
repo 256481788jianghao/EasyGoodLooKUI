@@ -10,5 +10,7 @@
         <Setter Property="LightWidth" Value="20"></Setter>
         <Setter Property="LightHeight" Value="20"></Setter>
         <Setter Property="CRadius" Value="10"></Setter>
+        <Setter Property="NameLength" Value="1*"></Setter>
+        <Setter Property="LightLength" Value="1*"></Setter>
     </Style>
 </ResourceDictionary>

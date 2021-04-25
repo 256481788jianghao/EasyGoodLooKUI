@@ -33,6 +33,24 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty LightWidthProperty =
             DependencyProperty.Register("LightWidth", typeof(double), typeof(Light));
 
+        public string LightLength
+        {
+            get { return (string)GetValue(LightLengthProperty); }
+            set { SetValue(LightLengthProperty, value); }
+        }
+
+        public static readonly DependencyProperty LightLengthProperty =
+            DependencyProperty.Register("LightLength", typeof(string), typeof(Light));
+
+        public string NameLength
+        {
+            get { return (string)GetValue(NameLengthProperty); }
+            set { SetValue(NameLengthProperty, value); }
+        }
+
+        public static readonly DependencyProperty NameLengthProperty =
+            DependencyProperty.Register("NameLength", typeof(string), typeof(Light));
+
         public double LightHeight
         {
             get { return (double)GetValue(LightHeightProperty); }
