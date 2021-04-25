@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UIBrowser"
         xmlns:pu="clr-namespace:EasyGoodLookUI;assembly=EasyGoodLookUI"
         mc:Ignorable="d"
-        Title="EeasyGoodLookUI" Height="450" Width="800">
+        Title="EeasyGoodLookUI" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <pu:TabControlEx TabStripPlacement="Left">
             <pu:TabItemEx Header="Home" FocusBackground="Red">

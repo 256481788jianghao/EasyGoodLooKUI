@@ -50,11 +50,11 @@
                                         <Path Width="16" Height="16" Stretch="Uniform" Fill="Black" Data="{StaticResource MinIcon}"></Path>
                                     </Button.Content>
                                 </Button>
-                                <Button Grid.Column="3" Style="{StaticResource TitleButtonStyle}"
+                                <Button x:Name="Button_Max" Grid.Column="3" Style="{StaticResource TitleButtonStyle}"
                                         Command="{TemplateBinding MaximizeCommand}"
                                         CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}">
                                     <Button.Content>
-                                        <Path Width="16" Height="16" Stretch="Uniform" Fill="Black" Data="{StaticResource MaxIcon}"></Path>
+                                        <Path x:Name="Button_Max_Path" Width="16" Height="16" Stretch="Uniform" Fill="Black" Data="{StaticResource MaxIcon}"></Path>
                                     </Button.Content>
                                 </Button>
                                 <Button Grid.Column="4" Style="{StaticResource TitleButtonStyle}"
@@ -84,6 +84,12 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowState" Value="Maximized">
                             <Setter TargetName="AdornerDecorator_c" Property="Margin" Value="10,0,10,0"></Setter>
+                            <Setter TargetName="Button_Max" Property="IsEnabled" Value="False"></Setter>
+                            <Setter TargetName="Button_Max_Path" Property="Fill" Value="Gray"></Setter>
+                        </Trigger>
+                        <Trigger Property="ResizeMode" Value="CanMinimize">
+                            <Setter TargetName="Button_Max" Property="IsEnabled" Value="False"></Setter>
+                            <Setter TargetName="Button_Max_Path" Property="Fill" Value="Gray"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
