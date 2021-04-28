@@ -97,7 +97,7 @@
         </Setter>
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome GlassFrameThickness="0" CaptionHeight="10" CornerRadius="0" ResizeBorderThickness="3"></WindowChrome>
+                <WindowChrome GlassFrameThickness="0" CaptionHeight="{Binding RelativeSource={RelativeSource    Mode=FindAncestor,  AncestorType={x:Type local:WindowEx}},Path=HCaptionHeight}" CornerRadius="0" ResizeBorderThickness="3"></WindowChrome>
             </Setter.Value>
         </Setter>
     </Style>

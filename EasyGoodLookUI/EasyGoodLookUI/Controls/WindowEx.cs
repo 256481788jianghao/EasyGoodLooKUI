@@ -98,6 +98,15 @@ namespace EasyGoodLookUI
 
         public static readonly DependencyProperty TitleIconProperty =
             DependencyProperty.Register("TitleIcon", typeof(object), typeof(WindowEx));
+
+        public double HCaptionHeight
+        {
+            get { return (double)GetValue(HCaptionHeightProperty); }
+            set { SetValue(HCaptionHeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty HCaptionHeightProperty =
+            DependencyProperty.Register("HCaptionHeight", typeof(double), typeof(WindowEx));
         #endregion
 
         #region Commands
