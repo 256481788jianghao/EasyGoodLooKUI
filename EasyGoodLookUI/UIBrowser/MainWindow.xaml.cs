@@ -43,5 +43,15 @@ namespace UIBrowser
             public double Test { get; set; } = 123.4567;
             public string TestStr { get; set; } = "jianghao";
         }
+
+        void JoyStickTest(double x,double y)
+        {
+            Console.WriteLine(x + " " + y);
+        }
+
+        private void WindowEx_Loaded(object sender, RoutedEventArgs e)
+        {
+            JS.JoyStickHandler += new JoyStickPanel.JoyStickPanelDelegate(JoyStickTest);
+        }
     }
 }

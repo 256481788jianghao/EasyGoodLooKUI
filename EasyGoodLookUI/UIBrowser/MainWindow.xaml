@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UIBrowser"
         xmlns:pu="clr-namespace:EasyGoodLookUI;assembly=EasyGoodLookUI"
         mc:Ignorable="d"
-        Title="EeasyGoodLookUI" Height="450" Width="800" WindowState="Maximized">
+        Title="EeasyGoodLookUI" Height="450" Width="800" Loaded="WindowEx_Loaded">
     <Grid>
         <pu:TabControlEx TabStripPlacement="Left">
             <pu:TabItemEx Header="Home" FocusBackground="Red">
@@ -52,6 +52,22 @@
                         </Grid>
                     </pu:GroupBoxEx>
                     <pu:GroupBoxEx Header="GPB2" Grid.Row="1"></pu:GroupBoxEx>
+                </Grid>
+            </pu:TabItemEx>
+            <pu:TabItemEx Header="JoyStick">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <pu:JoyStickPanel Radius="100"></pu:JoyStickPanel>
+                    <pu:JoyStickPanel x:Name="JS" Radius="400" Grid.Column="1"></pu:JoyStickPanel>
                 </Grid>
             </pu:TabItemEx>
         </pu:TabControlEx>

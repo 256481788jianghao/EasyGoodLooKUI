@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="EasyGoodLookUI.JoyStickPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasyGoodLookUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" 
+             d:DesignWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Loaded="UserControl_Loaded">
+    <Grid x:Name="Grid_Panel">
+        <Canvas x:Name="Canvas_Main" MouseDown="Canvas_Main_MouseDown">
+            <Ellipse Fill="White" Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Height="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Stroke="Black" StrokeThickness="2"/>
+            <Ellipse x:Name="Ellipse_Med" Width="10" Height="10" Fill="Red"></Ellipse>
+            <Ellipse x:Name="Ellipse_Arch" Width="20" Height="20" Fill="Black" Stroke="Black" StrokeThickness="2"/>
+        </Canvas>
+    </Grid>
+</UserControl>

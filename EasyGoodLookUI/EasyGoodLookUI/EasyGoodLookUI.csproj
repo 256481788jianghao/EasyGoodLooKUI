@@ -59,6 +59,9 @@
     <Compile Include="Controls\TabItemEx.cs" />
     <Compile Include="Converter\GridLengthConverter.cs" />
     <Compile Include="Converter\StringToListConverter.cs" />
+    <Compile Include="JoyStickPanel.xaml.cs">
+      <DependentUpon>JoyStickPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\GridLengthUtils.cs" />
     <Page Include="DefaultStyles\DefaultStyles.xaml">
       <SubType>Designer</SubType>
@@ -101,6 +104,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Image\SvgImages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JoyStickPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
