@@ -42,16 +42,27 @@ namespace EasyGoodLookUI
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             m_Med = new Point(Radius * 0.5, Radius * 0.5);
+            Line_Col.X1 = m_Med.X;
+            Line_Col.Y1 = 0;
+            Line_Col.X2 = m_Med.X;
+            Line_Col.Y2 = Radius;
+            Line_Row.X1 = 0;
+            Line_Row.Y1 = m_Med.Y;
+            Line_Row.X2 = Radius;
+            Line_Row.Y2 = m_Med.Y;
             Canvas.SetLeft(Ellipse_Arch, Radius * 0.5 - 10);
             Canvas.SetTop(Ellipse_Arch, Radius * 0.5 - 10);
             Canvas.SetLeft(Ellipse_Med, Radius * 0.5 - 5);
             Canvas.SetTop(Ellipse_Med, Radius * 0.5 - 5);
         }
 
+        bool m_StartNotify = false;
+
         private void Canvas_Main_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if(e.ChangedButton == MouseButton.Left)
             {
+                m_StartNotify = true;
                 Point p = e.GetPosition(Canvas_Main);
                 Point p2 = ComputeXY(p);
                 JoyStickHandler?.Invoke(p2.X, p2.Y);
@@ -87,7 +98,28 @@ namespace EasyGoodLookUI
             {
                 y = 1;
             }
-            return new Point(x, y);
+            return new Point(x, -y);
+        }
+
+        private void Canvas_Main_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m_StartNotify)
+            {
+                Point p = e.GetPosition(Canvas_Main);
+                Point p2 = ComputeXY(p);
+                JoyStickHandler?.Invoke(p2.X, p2.Y);
+                //Console.WriteLine(p2.X + " " + p2.Y);
+                Canvas.SetLeft(Ellipse_Arch, p.X - 10);
+                Canvas.SetTop(Ellipse_Arch, p.Y - 10);
+            }
+        }
+
+        private void Canvas_Main_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            m_StartNotify = false;
+            Canvas.SetLeft(Ellipse_Arch, Radius * 0.5 - 10);
+            Canvas.SetTop(Ellipse_Arch, Radius * 0.5 - 10);
+            JoyStickHandler?.Invoke(0, 0);
         }
     }
 }

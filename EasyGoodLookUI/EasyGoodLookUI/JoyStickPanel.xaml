@@ -8,8 +8,10 @@
              d:DesignHeight="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" 
              d:DesignWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Loaded="UserControl_Loaded">
     <Grid x:Name="Grid_Panel">
-        <Canvas x:Name="Canvas_Main" MouseDown="Canvas_Main_MouseDown">
-            <Ellipse Fill="White" Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Height="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Stroke="Black" StrokeThickness="2"/>
+        <Canvas x:Name="Canvas_Main" MouseDown="Canvas_Main_MouseDown" MouseMove="Canvas_Main_MouseMove" MouseUp="Canvas_Main_MouseUp">
+            <Ellipse Fill="LightGray" Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Height="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Stroke="Black" StrokeThickness="2"/>
+            <Line x:Name="Line_Col" Stroke="Black" StrokeThickness="1"></Line>
+            <Line x:Name="Line_Row" Stroke="Black" StrokeThickness="1"></Line>
             <Ellipse x:Name="Ellipse_Med" Width="10" Height="10" Fill="Red"></Ellipse>
             <Ellipse x:Name="Ellipse_Arch" Width="20" Height="20" Fill="Black" Stroke="Black" StrokeThickness="2"/>
         </Canvas>
