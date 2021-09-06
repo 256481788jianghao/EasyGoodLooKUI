@@ -105,10 +105,14 @@ namespace EasyGoodLookUI
         {
             if (m_StartNotify)
             {
+
                 Point p = e.GetPosition(Canvas_Main);
                 Point p2 = ComputeXY(p);
                 JoyStickHandler?.Invoke(p2.X, p2.Y);
-                //Console.WriteLine(p2.X + " " + p2.Y);
+                if ((p2.X*p2.X+p2.Y*p2.Y)>1)
+                { 
+                    return;
+                }
                 Canvas.SetLeft(Ellipse_Arch, p.X - 10);
                 Canvas.SetTop(Ellipse_Arch, p.Y - 10);
             }
