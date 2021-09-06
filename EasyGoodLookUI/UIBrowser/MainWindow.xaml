@@ -67,7 +67,8 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <pu:JoyStickPanel Radius="100"></pu:JoyStickPanel>
-                    <pu:JoyStickPanel x:Name="JS" Radius="400" Grid.Column="1"></pu:JoyStickPanel>
+                    <pu:JoyStickPanel x:Name="JS" Grid.Column="1"></pu:JoyStickPanel>
+                    <pu:ToggleButton Grid.Row="2" Grid.Column="2"></pu:ToggleButton>
                 </Grid>
             </pu:TabItemEx>
         </pu:TabControlEx>

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="EasyGoodLookUI.ToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasyGoodLookUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:ToggleButton}},Path=xHeight}" 
+             d:DesignWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:ToggleButton}},Path=xWidth}">
+    <Grid>
+        <Canvas MouseDown="Canvas_MouseDown">
+            <Rectangle x:Name="R1" Fill="Red" Stroke="Black" StrokeThickness="1"></Rectangle>
+            <Rectangle x:Name="R2" Fill="Green"></Rectangle>
+            <Rectangle x:Name="R3" Fill="White"></Rectangle>
+        </Canvas>
+    </Grid>
+</UserControl>
