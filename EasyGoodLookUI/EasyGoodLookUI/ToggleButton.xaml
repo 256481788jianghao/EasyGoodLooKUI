@@ -8,9 +8,17 @@
              d:DesignHeight="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:ToggleButton}},Path=xHeight}" 
              d:DesignWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:ToggleButton}},Path=xWidth}">
     <Grid>
-        <Canvas MouseDown="Canvas_MouseDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:ToggleButton}},Path=NameStr}" HorizontalAlignment="Right"></Label>
+        <Canvas MouseDown="Canvas_MouseDown" Grid.Column="1">
+            
             <Rectangle x:Name="R1" Fill="Red" Stroke="Black" StrokeThickness="1"></Rectangle>
             <Rectangle x:Name="R2" Fill="Green"></Rectangle>
+            <TextBlock x:Name="TextBlock_OFF" Text="OFF" Foreground="White" FontSize="12"></TextBlock>
+            <TextBlock x:Name="TextBlock_ON"  Text="ON" Foreground="White" FontSize="12"></TextBlock>
             <Rectangle x:Name="R3" Fill="White"></Rectangle>
         </Canvas>
     </Grid>
