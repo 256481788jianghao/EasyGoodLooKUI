@@ -51,7 +51,19 @@ namespace UIBrowser
 
         private void WindowEx_Loaded(object sender, RoutedEventArgs e)
         {
-            JS.JoyStickHandler += new JoyStickPanel.JoyStickPanelDelegate(JoyStickTest);
+            
+        }
+
+        private void SelfMediumButton_SelectButton(object sender, RoutedEventArgs e)
+        {
+            SelfMediumButton button = (SelfMediumButton)sender;
+            Console.WriteLine(button.BPos.ToString());
+        }
+
+        private void JS_PosChange(object sender, RoutedEventArgs e)
+        {
+            JoyStickPanelEventArgs args = (JoyStickPanelEventArgs)e;
+            Console.WriteLine(args.CurPoint.X + " " + args.CurPoint.Y);
         }
     }
 }

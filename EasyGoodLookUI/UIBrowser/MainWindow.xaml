@@ -67,9 +67,9 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <pu:JoyStickPanel Radius="100"></pu:JoyStickPanel>
-                    <pu:JoyStickPanel x:Name="JS" Grid.Column="1"></pu:JoyStickPanel>
+                    <pu:JoyStickPanel x:Name="JS" Grid.Column="1" PosChange="JS_PosChange"></pu:JoyStickPanel>
                     <pu:ToggleButton Grid.Row="2" Grid.Column="2"></pu:ToggleButton>
-                    <pu:SelfMediumButton Grid.Row="2" Grid.Column="1"></pu:SelfMediumButton>
+                    <pu:SelfMediumButton Grid.Row="2" Grid.Column="1" SelectButton="SelfMediumButton_SelectButton"></pu:SelfMediumButton>
                 </Grid>
             </pu:TabItemEx>
         </pu:TabControlEx>

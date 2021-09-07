@@ -62,6 +62,7 @@
     <Compile Include="JoyStickPanel.xaml.cs">
       <DependentUpon>JoyStickPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JoyStickPanelEventArgs.cs" />
     <Compile Include="SelfMediumButton.xaml.cs">
       <DependentUpon>SelfMediumButton.xaml</DependentUpon>
     </Compile>

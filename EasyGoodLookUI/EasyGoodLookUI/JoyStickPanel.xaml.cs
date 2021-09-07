@@ -20,10 +20,6 @@ namespace EasyGoodLookUI
     /// </summary>
     public partial class JoyStickPanel : UserControl
     {
-
-        public delegate void JoyStickPanelDelegate(double x, double y);
-        public event JoyStickPanelDelegate JoyStickHandler;
-
         Point m_Med;
         public JoyStickPanel()
         {
@@ -65,7 +61,8 @@ namespace EasyGoodLookUI
                 m_StartNotify = true;
                 Point p = e.GetPosition(Canvas_Main);
                 Point p2 = ComputeXY(p);
-                JoyStickHandler?.Invoke(p2.X, p2.Y);
+                JoyStickPanelEventArgs args = new JoyStickPanelEventArgs(PosChangeEvent, this, p2);
+                RaiseEvent(args);
                 //Console.WriteLine(p2.X + " " + p2.Y);
                 Canvas.SetLeft(Ellipse_Arch, p.X - 10);
                 Canvas.SetTop(Ellipse_Arch, p.Y - 10);
@@ -74,7 +71,8 @@ namespace EasyGoodLookUI
             {
                 Canvas.SetLeft(Ellipse_Arch, Radius * 0.5 - 10);
                 Canvas.SetTop(Ellipse_Arch, Radius * 0.5 - 10);
-                JoyStickHandler?.Invoke(0, 0);
+                JoyStickPanelEventArgs args = new JoyStickPanelEventArgs(PosChangeEvent, this, new Point(0, 0));
+                RaiseEvent(args);
             }
         }
 
@@ -108,7 +106,8 @@ namespace EasyGoodLookUI
 
                 Point p = e.GetPosition(Canvas_Main);
                 Point p2 = ComputeXY(p);
-                JoyStickHandler?.Invoke(p2.X, p2.Y);
+                JoyStickPanelEventArgs args = new JoyStickPanelEventArgs(PosChangeEvent, this, p2);
+                RaiseEvent(args);
                 if ((p2.X*p2.X+p2.Y*p2.Y)>1)
                 { 
                     return;
@@ -123,7 +122,18 @@ namespace EasyGoodLookUI
             m_StartNotify = false;
             Canvas.SetLeft(Ellipse_Arch, Radius * 0.5 - 10);
             Canvas.SetTop(Ellipse_Arch, Radius * 0.5 - 10);
-            JoyStickHandler?.Invoke(0, 0);
+            JoyStickPanelEventArgs args = new JoyStickPanelEventArgs(PosChangeEvent, this, new Point(0, 0));
+            RaiseEvent(args);
+        }
+
+        public static readonly RoutedEvent PosChangeEvent = EventManager.RegisterRoutedEvent("PosChangeEvent", RoutingStrategy.Bubble, typeof(EventHandler<JoyStickPanelEventArgs>), typeof(JoyStickPanel));
+
+        public event RoutedEventHandler PosChange
+        {
+            //将路由事件添加路由事件处理程序
+            add { AddHandler(PosChangeEvent, value); }
+            //从路由事件处理程序中移除路由事件
+            remove { RemoveHandler(PosChangeEvent, value); }
         }
     }
 }

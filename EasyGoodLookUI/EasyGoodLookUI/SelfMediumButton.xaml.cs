@@ -52,8 +52,6 @@ namespace EasyGoodLookUI
             MEDIUM,
             RIGHT
         }
-        public delegate void SelfMediumButtonHandler(SelfMediumButtonPos pos);
-        public event SelfMediumButtonHandler SelfMediumButtonEvent;
 
         public string NameStr
         {
@@ -99,14 +97,25 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty xHeightProperty =
             DependencyProperty.Register("xHeight", typeof(double), typeof(SelfMediumButton), new PropertyMetadata(30.0));
 
+
+        public static readonly RoutedEvent SelectButtonEvent = EventManager.RegisterRoutedEvent("SelectButtonEvent", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(SelfMediumButton));
+        
+        public event RoutedEventHandler SelectButton
+        {
+            //将路由事件添加路由事件处理程序
+            add { AddHandler(SelectButtonEvent, value); }
+            //从路由事件处理程序中移除路由事件
+            remove { RemoveHandler(SelectButtonEvent, value); }
+        }
+
         double atime = 100;
-        int pos_index = 1;
+        public SelfMediumButtonPos BPos = SelfMediumButtonPos.MEDIUM;
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton != MouseButtonState.Pressed) { return; }
             Point p = e.GetPosition(Canvas_Main);
             if(p.X < xWidth * 0.3){
-                pos_index = 0;
+                BPos = SelfMediumButtonPos.LEFT;
                 Storyboard bd = new Storyboard();
                 DoubleAnimation da = new DoubleAnimation();
                 da.From = xWidth / 3;
@@ -116,11 +125,10 @@ namespace EasyGoodLookUI
                 Storyboard.SetTargetProperty(da, new PropertyPath(Canvas.LeftProperty));
                 bd.Children.Add(da);
                 bd.Begin();
-                SelfMediumButtonEvent?.Invoke(SelfMediumButtonPos.LEFT);
             }
             if (p.X > 2*xWidth * 0.3)
             {
-                pos_index = 2;
+                BPos = SelfMediumButtonPos.RIGHT;
                 Storyboard bd = new Storyboard();
                 DoubleAnimation da = new DoubleAnimation();
                 da.From = xWidth / 3;
@@ -130,14 +138,15 @@ namespace EasyGoodLookUI
                 Storyboard.SetTargetProperty(da, new PropertyPath(Canvas.LeftProperty));
                 bd.Children.Add(da);
                 bd.Begin();
-                SelfMediumButtonEvent?.Invoke(SelfMediumButtonPos.RIGHT);
             }
+            RoutedEventArgs args = new RoutedEventArgs(SelectButtonEvent, this);
+            RaiseEvent(args);
         }
 
         private void Canvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton != MouseButtonState.Released) { return; }
-            if(pos_index == 0)
+            if(BPos == SelfMediumButtonPos.LEFT)
             {
                 Storyboard bd = new Storyboard();
                 DoubleAnimation da = new DoubleAnimation();
@@ -149,7 +158,7 @@ namespace EasyGoodLookUI
                 bd.Children.Add(da);
                 bd.Begin();
             }
-            if (pos_index == 2)
+            if (BPos == SelfMediumButtonPos.RIGHT)
             {
                 Storyboard bd = new Storyboard();
                 DoubleAnimation da = new DoubleAnimation();
@@ -162,8 +171,10 @@ namespace EasyGoodLookUI
                 bd.Begin();
             }
 
-            pos_index = 1;
-            SelfMediumButtonEvent?.Invoke(SelfMediumButtonPos.MEDIUM);
+            BPos = SelfMediumButtonPos.MEDIUM;
+            RoutedEventArgs args = new RoutedEventArgs(SelectButtonEvent, this);
+            RaiseEvent(args);
+
         }
     }
 }
