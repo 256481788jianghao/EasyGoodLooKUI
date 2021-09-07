@@ -86,9 +86,10 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty xHeightProperty =
             DependencyProperty.Register("xHeight", typeof(double), typeof(ToggleButton), new PropertyMetadata(30.0));
 
-        double atime = 200;
+        double atime = 100;
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            if(e.LeftButton != MouseButtonState.Pressed) { return; }
             IsOn = !IsOn;
             if (IsOn)
             {

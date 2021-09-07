@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="EasyGoodLookUI.SelfMediumButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasyGoodLookUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:SelfMediumButton}},Path=xHeight}" 
+             d:DesignWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:SelfMediumButton}},Path=xWidth}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:SelfMediumButton}},Path=NameStr}" HorizontalAlignment="Right"></Label>
+        <Canvas x:Name="Canvas_Main" Grid.Column="1" MouseDown="Canvas_MouseDown" MouseUp="Canvas_MouseUp">
+            <Rectangle x:Name="R1" Fill="Red" Stroke="Black" StrokeThickness="1"></Rectangle>
+            <Rectangle x:Name="R2" Fill="Green"></Rectangle>
+            <Rectangle x:Name="R4" Fill="Yellow"></Rectangle>
+            <TextBlock x:Name="TextBlock_OFF" Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:SelfMediumButton}},Path=RightText}" Foreground="White" FontSize="12"></TextBlock>
+            <TextBlock x:Name="TextBlock_ON"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:SelfMediumButton}},Path=LeftText}" Foreground="White" FontSize="12"></TextBlock>
+            <Rectangle x:Name="R3" Fill="White"></Rectangle>
+        </Canvas>
+    </Grid>
+</UserControl>

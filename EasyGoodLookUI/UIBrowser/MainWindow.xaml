@@ -69,6 +69,7 @@
                     <pu:JoyStickPanel Radius="100"></pu:JoyStickPanel>
                     <pu:JoyStickPanel x:Name="JS" Grid.Column="1"></pu:JoyStickPanel>
                     <pu:ToggleButton Grid.Row="2" Grid.Column="2"></pu:ToggleButton>
+                    <pu:SelfMediumButton Grid.Row="2" Grid.Column="1"></pu:SelfMediumButton>
                 </Grid>
             </pu:TabItemEx>
         </pu:TabControlEx>
