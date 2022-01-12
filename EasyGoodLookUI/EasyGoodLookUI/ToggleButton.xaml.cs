@@ -59,6 +59,34 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty NameStrProperty =
             DependencyProperty.Register("NameStr", typeof(string), typeof(ToggleButton), new PropertyMetadata("namestr"));
 
+
+        public string TextColorStr
+        {
+            get { return (string)GetValue(TextColorStrProperty); }
+            set { SetValue(TextColorStrProperty, value); }
+        }
+
+        public static readonly DependencyProperty TextColorStrProperty =
+            DependencyProperty.Register("TextColorStr", typeof(string), typeof(ToggleButton), new PropertyMetadata("White"));
+
+        public string OnColorStr
+        {
+            get { return (string)GetValue(OnColorStrProperty); }
+            set { SetValue(OnColorStrProperty, value); }
+        }
+
+        public static readonly DependencyProperty OnColorStrProperty =
+            DependencyProperty.Register("OnColorStr", typeof(string), typeof(ToggleButton), new PropertyMetadata("Green"));
+
+        public string OffColorStr
+        {
+            get { return (string)GetValue(OffColorStrProperty); }
+            set { SetValue(OffColorStrProperty, value); }
+        }
+
+        public static readonly DependencyProperty OffColorStrProperty =
+            DependencyProperty.Register("OffColorStr", typeof(string), typeof(ToggleButton), new PropertyMetadata("Red"));
+
         public bool IsOn
         {
             get { return (bool)GetValue(IsOnProperty); }
