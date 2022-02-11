@@ -22,8 +22,8 @@ namespace EasyGoodLookUI
     public partial class ToggleButton : UserControl
     {
 
-        public delegate void ToggleButtonHandler(bool oldValue,bool newValue);
-        public event ToggleButtonHandler ToggleButtonEvent;
+        //public delegate void ToggleButtonHandler(bool oldValue,bool newValue);
+        //public event ToggleButtonHandler ToggleButtonEvent;
         public ToggleButton()
         {
             InitializeComponent();
@@ -114,6 +114,17 @@ namespace EasyGoodLookUI
         public static readonly DependencyProperty xHeightProperty =
             DependencyProperty.Register("xHeight", typeof(double), typeof(ToggleButton), new PropertyMetadata(30.0));
 
+        public static readonly RoutedEvent ToggleChangeEvent = EventManager.RegisterRoutedEvent("ToggleChangeEvent", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ToggleButton));
+
+        public event RoutedEventHandler ToggleChange
+        {
+            //将路由事件添加路由事件处理程序
+            add { AddHandler(ToggleChangeEvent, value); }
+            //从路由事件处理程序中移除路由事件
+            remove { RemoveHandler(ToggleChangeEvent, value); }
+        }
+
+
         double atime = 100;
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -145,7 +156,8 @@ namespace EasyGoodLookUI
                 bd.Begin();
                 //Canvas.SetLeft(R3, 1);
             }
-            ToggleButtonEvent?.Invoke(!IsOn, IsOn);
+            RoutedEventArgs args = new RoutedEventArgs(ToggleChangeEvent, this);
+            RaiseEvent(args);
         }
     }
 }

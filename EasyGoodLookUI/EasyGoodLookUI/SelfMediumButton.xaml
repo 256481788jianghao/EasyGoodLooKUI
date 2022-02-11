@@ -13,7 +13,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:SelfMediumButton}},Path=NameStr}" HorizontalAlignment="Right"></Label>
-        <Canvas x:Name="Canvas_Main" Grid.Column="1" MouseDown="Canvas_MouseDown" MouseUp="Canvas_MouseUp">
+        <Canvas x:Name="Canvas_Main" Grid.Column="1" MouseDown="Canvas_MouseDown" MouseUp="Canvas_MouseUp" MouseLeave="Canvas_Main_MouseLeave">
             <Rectangle x:Name="R1" Fill="Red" Stroke="Black" StrokeThickness="1"></Rectangle>
             <Rectangle x:Name="R2" Fill="Green"></Rectangle>
             <Rectangle x:Name="R4" Fill="Yellow"></Rectangle>

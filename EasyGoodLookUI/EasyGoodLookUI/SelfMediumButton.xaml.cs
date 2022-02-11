@@ -176,5 +176,37 @@ namespace EasyGoodLookUI
             RaiseEvent(args);
 
         }
+
+        private void Canvas_Main_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (BPos == SelfMediumButtonPos.LEFT)
+            {
+                Storyboard bd = new Storyboard();
+                DoubleAnimation da = new DoubleAnimation();
+                da.From = 1;
+                da.To = xWidth / 3;
+                da.Duration = new Duration(TimeSpan.FromMilliseconds(atime));
+                Storyboard.SetTarget(da, R3);
+                Storyboard.SetTargetProperty(da, new PropertyPath(Canvas.LeftProperty));
+                bd.Children.Add(da);
+                bd.Begin();
+            }
+            if (BPos == SelfMediumButtonPos.RIGHT)
+            {
+                Storyboard bd = new Storyboard();
+                DoubleAnimation da = new DoubleAnimation();
+                da.From = 2 * xWidth / 3 - 1;
+                da.To = xWidth / 3;
+                da.Duration = new Duration(TimeSpan.FromMilliseconds(atime));
+                Storyboard.SetTarget(da, R3);
+                Storyboard.SetTargetProperty(da, new PropertyPath(Canvas.LeftProperty));
+                bd.Children.Add(da);
+                bd.Begin();
+            }
+
+            BPos = SelfMediumButtonPos.MEDIUM;
+            RoutedEventArgs args = new RoutedEventArgs(SelectButtonEvent, this);
+            RaiseEvent(args);
+        }
     }
 }

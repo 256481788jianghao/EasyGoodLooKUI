@@ -65,5 +65,11 @@ namespace UIBrowser
             JoyStickPanelEventArgs args = (JoyStickPanelEventArgs)e;
             Console.WriteLine(args.CurPoint.X + " " + args.CurPoint.Y);
         }
+
+        private void ToggleButton_ToggleChange(object sender, RoutedEventArgs e)
+        {
+            ToggleButton button = (ToggleButton)sender;
+            bool test = button.IsOn;
+        }
     }
 }
