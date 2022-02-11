@@ -90,11 +90,40 @@ namespace EasyGoodLookUI
         public bool IsOn
         {
             get { return (bool)GetValue(IsOnProperty); }
-            set { SetValue(IsOnProperty, value); }
+            set {
+                SetValue(IsOnProperty, value); 
+            }
         }
 
         public static readonly DependencyProperty IsOnProperty =
             DependencyProperty.Register("IsOn", typeof(bool), typeof(ToggleButton), new PropertyMetadata(false));
+
+
+        //FIXME:JUST FOR NOW ,MODIFY LATER
+        public bool IsOnLast
+        {
+            get { return (bool)GetValue(IsOnLastProperty); }
+            set
+            {
+                SetValue(IsOnLastProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty IsOnLastProperty =
+            DependencyProperty.Register("IsOnLast", typeof(bool), typeof(ToggleButton), new PropertyMetadata(false));
+
+        //FIXME:JUST FOR NOW ,MODIFY LATER
+        public bool KeepLastIsOn
+        {
+            get { return (bool)GetValue(KeepLastIsOnProperty); }
+            set
+            {
+                SetValue(KeepLastIsOnProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty KeepLastIsOnProperty =
+            DependencyProperty.Register("KeepLastIsOn", typeof(bool), typeof(ToggleButton), new PropertyMetadata(false));
 
         public double xWidth
         {
@@ -129,7 +158,17 @@ namespace EasyGoodLookUI
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if(e.LeftButton != MouseButtonState.Pressed) { return; }
+            IsOnLast = IsOn;
             IsOn = !IsOn;
+            RoutedEventArgs args = new RoutedEventArgs(ToggleChangeEvent, this);
+            RaiseEvent(args);
+            if (KeepLastIsOn)
+            {
+                IsOn = IsOnLast;
+                KeepLastIsOn = false;
+                return;
+            }
+            
             if (IsOn)
             {
                 Storyboard bd = new Storyboard();
@@ -156,8 +195,7 @@ namespace EasyGoodLookUI
                 bd.Begin();
                 //Canvas.SetLeft(R3, 1);
             }
-            RoutedEventArgs args = new RoutedEventArgs(ToggleChangeEvent, this);
-            RaiseEvent(args);
+           
         }
     }
 }

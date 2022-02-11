@@ -70,6 +70,7 @@ namespace UIBrowser
         {
             ToggleButton button = (ToggleButton)sender;
             bool test = button.IsOn;
+            button.KeepLastIsOn = true;
         }
     }
 }
