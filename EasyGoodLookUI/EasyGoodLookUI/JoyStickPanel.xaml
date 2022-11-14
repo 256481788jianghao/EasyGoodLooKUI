@@ -8,7 +8,7 @@
              d:DesignHeight="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" 
              d:DesignWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Loaded="UserControl_Loaded">
     <Grid x:Name="Grid_Panel">
-        <Canvas x:Name="Canvas_Main" MouseDown="Canvas_Main_MouseDown" MouseMove="Canvas_Main_MouseMove" MouseUp="Canvas_Main_MouseUp">
+        <Canvas x:Name="Canvas_Main" MouseDown="Canvas_Main_MouseDown" MouseMove="Canvas_Main_MouseMove" MouseUp="Canvas_Main_MouseUp" LostFocus="Canvas_Main_LostFocus" MouseLeave="Canvas_Main_MouseLeave" TouchLeave="Canvas_Main_TouchLeave">
             <Ellipse Fill="LightGray" Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Height="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type local:JoyStickPanel}},Path=Radius}" Stroke="Black" StrokeThickness="2"/>
             <Line x:Name="Line_Col" Stroke="Black" StrokeThickness="1"></Line>
             <Line x:Name="Line_Row" Stroke="Black" StrokeThickness="1"></Line>

@@ -135,5 +135,34 @@ namespace EasyGoodLookUI
             //从路由事件处理程序中移除路由事件
             remove { RemoveHandler(PosChangeEvent, value); }
         }
+
+        private void Canvas_Main_LostFocus(object sender, RoutedEventArgs e)
+        {
+            //Canvas.SetLeft(Ellipse_Arch, Radius * 0.5 - 10);
+            //Canvas.SetTop(Ellipse_Arch, Radius * 0.5 - 10);
+            //JoyStickPanelEventArgs args = new JoyStickPanelEventArgs(PosChangeEvent, this, new Point(0, 0));
+            //RaiseEvent(args);
+            //MessageBox.Show(args.ToString());
+        }
+
+        private void Canvas_Main_MouseLeave(object sender, MouseEventArgs e)
+        {
+            m_StartNotify = false;
+            Canvas.SetLeft(Ellipse_Arch, Radius * 0.5 - 10);
+            Canvas.SetTop(Ellipse_Arch, Radius * 0.5 - 10);
+            JoyStickPanelEventArgs args = new JoyStickPanelEventArgs(PosChangeEvent, this, new Point(0, 0));
+            RaiseEvent(args);
+            //MessageBox.Show(args.ToString());
+        }
+
+        private void Canvas_Main_TouchLeave(object sender, TouchEventArgs e)
+        {
+            m_StartNotify = false;
+            Canvas.SetLeft(Ellipse_Arch, Radius * 0.5 - 10);
+            Canvas.SetTop(Ellipse_Arch, Radius * 0.5 - 10);
+            JoyStickPanelEventArgs args = new JoyStickPanelEventArgs(PosChangeEvent, this, new Point(0, 0));
+            RaiseEvent(args);
+            //MessageBox.Show(args.ToString());
+        }
     }
 }
